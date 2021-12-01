@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+* {
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: #f8f9fa;
+  color: #031831;
+  transition: 0.2s linear;
+  font-family: 'Courier New', Courier, monospace;
+}
+body h1 {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+body h1 span, body h1 i {
+  color: #ffa502;
+}
+body h3 {
+  color: #ffa502;
+  font-size: 1.5rem;
+}
+body .container .choices {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem auto 3rem;
+  width: 500px;
+}
+body .container .choices button {
+  flex: 1 0 45%;
+  width: 200px;
+  height: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin: 0.4rem;
+  outline: none;
+  background: #dfe4ea;
+  user-select: none;
+  font-weight: 600;
+}
+body .container .choices button:hover {
+  background: #ffa502;
+  transition: 0.5s;
+}
+body .container .choices button:active {
+  transform: scale(0.9);
+  transition: transform 0.1s;
+}
+body .container .choices button p {
+  font-size: 1.3rem;
+}
+body #progress {
+  font-size: 1.3rem;
+  color: #ffa502;
+}
+
+.toggle {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.checkbox {
+  display: none;
+}
+.label{
+  height: 26px;
+  width: 50px;
+  padding: 5px 8px;
+  background-color: rgb(117, 115, 115);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  transform: scale(1.2);
+  box-shadow: 2px 1px 1px black;
+}
+.label .ball {
+  background: #dfe4ea;
+  border-radius: 50%;
+  height: 27px;
+  width: 26px;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  transform: translate(0px);
+  transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(29px);
+}
+.fa-moon {
+  color: black;
+}
+
+.dark {
+  background: black;
+  color: #dfe4ea;
+}
+.dark main {
+  background: rgb(38, 0, 255);
+}
+.dark .label {
+  box-shadow: 2px 1px 1px rgb(101, 113, 165);
+  background: gray;
+}
+.dark .ball {
+  background: rgb(0, 17, 255);
+}
+.fa-tint{
+  color: rgb 160, 160, 160;
+  position: absolute;
+  top: -20px;
+  animation: fall linear forwards;
+}
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
